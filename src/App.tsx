@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+// interface User {
+//   name: string;
+// }
+
+// function Welcome(props: User) {
+//   return <h1>Hello, {props.name} </h1>;
+// }
+
+// following does not work
+// maybe needs constructor or something
+// class Welcome extends React.Component {
+//   render() {
+//     return <h1>Hello, {this.props.name}</h1>;
+//   }
+// }
+
+const welcome = (name: string) => {
+  return <h1>Hello, {name}</h1>;
+};
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" /> */}
+      {welcome("Sara")}
+      {welcome("Cahal")}
+      {welcome("Edite")}
+      {welcome("Tak")}
     </div>
   );
-}
+};
 
 export default App;
